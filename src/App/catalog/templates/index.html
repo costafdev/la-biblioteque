@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+{% block title %}<title>Accueil/La Bibli</title>{% endblock %}
+{% block content %}
+  <h1>La Bibliotèque/Accueil</h1>
+  <p>Bienvenue sur La Bibliotèque, une site web élaboré par <a href="https://www.github.com/costafdev" target="_blank">@costafdev</a>!</p>
+  <h2>Contenue dinamique</h2>
+  <p>On y a:</p>
+  <ul>
+    <li><strong>Livres:</strong> {{ num_books }}</li>
+    <li><strong>Copies:</strong> {{ num_instances }}</li>
+    <li><strong>Copies disponibles:</strong> {{ num_instances_available }}</li>
+    <li><strong>Auteurs:</strong> {{ num_authors }}</li>
+  </ul>
+{% if num_visites > 1 %}
+  <p>C'est la {{ num_visites }}ème fois que vous êtes là :)</p>
+{% endif %}
+{% endblock %}

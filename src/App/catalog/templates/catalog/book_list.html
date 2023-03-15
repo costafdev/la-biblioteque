@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+{% block title %}<title>Livres/La Bibliotèque</title>{% endblock %}
+{% block content %}
+    <h1>Book list</h1>
+    {% if book_list %}
+    <ul>
+        {% for book in book_list %}
+            <li>
+                <a href="{{ book.get_absolute_url }}">{{ book.title }}</a> ({{ book.author }})
+            </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>Je suis désolé, on n'a pas de livres :(</p>
+    {% endif %}
+{% endblock %}

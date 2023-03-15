@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+{% block title %}<title>Auteurs/La Bibliotèque</title>{% endblock %}
+{% block content %}
+  <h1>Auteurs</h1>
+  {% if author_list %}
+  {% for author in author_list %}
+    <li>
+      <a href="{{ author.get_absolute_url }}">{{ author.sobrenome }}, {{ author.nome }}</a>
+    </li>
+  {% endfor %}
+  {% else %}
+    <p>Je suis désolé, on n'a pas des auteurs :(</p>
+  {% endif %}
+{% endblock %}
+

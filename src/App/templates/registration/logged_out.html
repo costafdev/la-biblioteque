@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+{% block sidebar %}
+  <ul class="sidebar-nav">
+    <li><a href="{% url 'index' %}">Accueil</a></li>
+  </ul>
+{% endblock %}
+{% block content %}
+  <p>Logged out!</p>
+  <a href="{% url 'login' %}">Tapez ici pour login.</a>
+{% endblock %}
